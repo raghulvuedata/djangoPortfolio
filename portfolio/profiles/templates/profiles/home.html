@@ -1,0 +1,107 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>My Portfolio</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Welcome to My Portfolio</h1>-->
+<!--    <div>-->
+<!--        <img src="{{ profile.profile_picture.url }}" alt="Profile Picture">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <h2>Work Experience</h2>-->
+<!--        <p>{{ profile.work_experience }}</p>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <h2>Hobbies</h2>-->
+<!--        <p>{{ profile.hobbies }}</p>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <h2>Skillsets</h2>-->
+<!--        <p>{{ profile.skills }}</p>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <style>
+        /* Add some CSS styles to enhance the appearance */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #4a148c, #4c4c4c, #1565c0);
+            background-size: 600% 100%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        img {
+            max-width: 200px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .section {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Portfolio</h1>
+    <div>
+        <img src="{{ profile.profile_picture.url }}" alt="Profile Picture">
+    </div>
+    <div class="section">
+        <h2>Work Experience</h2>
+        <p>{{ profile.work_experience }}</p>
+    </div>
+    <div class="section">
+        <h2>Hobbies</h2>
+        <p>{{ profile.hobbies }}</p>
+    </div>
+    <div class="section">
+        <h2>Skillsets</h2>
+        <p>{{ profile.skills }}</p>
+    </div>
+
+</body>
+</html>
